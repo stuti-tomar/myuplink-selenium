@@ -18,7 +18,33 @@ public class BaseTest {
 
 	@BeforeMethod
 	public void browserSetup() {
-		ChromeOptions options = new ChromeOptions();
+		
+		 // Specify the path to chromedriver
+	    String chromeDriverPath;
+
+	    // Check if we are running in Jenkins or locally
+	    if (System.getenv("JENKINS_HOME") != null) {
+	        // Jenkins environment
+	        chromeDriverPath = "C:/ProgramData/Jenkins/tools/chromedriver/chromedriver.exe";
+	    } else {
+	        // Local environment (set the path of local machine)
+	        chromeDriverPath = "C:\\Users\\91701\\.cache\\selenium\\chromedriver\\win64\\131.0.6778.69\\chromedriver.exe"; // update this path
+	    }
+
+	    // Set the chromedriver path dynamically
+	    System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+
+	    ChromeOptions options = new ChromeOptions();
+	    options.addArguments("start-maximized");
+	    options.addArguments("--remote-allow-origins=*");
+	    options.setExperimentalOption("useAutomationExtension", false);
+	    options.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
+	    options.addArguments("disable-infobars");
+
+	    driver = new ChromeDriver(options);
+	    driver.get("https://stageweb.nibejpi.com/login");
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		/*ChromeOptions options = new ChromeOptions();
 
 		options.addArguments("start-maximized");
 
@@ -31,7 +57,9 @@ public class BaseTest {
 
 		driver = new ChromeDriver(options);
 		driver.get("https://stageweb.nibejpi.com/login");
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));*/
+		
+		
 		
 
 	}

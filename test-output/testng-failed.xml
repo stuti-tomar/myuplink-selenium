@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.myuplink.testcase.Schedules">
+      <class name="org.myuplink.testcase.LoginTest">
         <methods>
-          <include name="testDeleteEvent"/>
           <include name="tearDown"/>
           <include name="browserSetup"/>
-          <include name="reachToSchedulePage"/>
+          <include name="testWrongCredentials"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- org.myuplink.testcase.Schedules -->
+      </class> <!-- org.myuplink.testcase.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

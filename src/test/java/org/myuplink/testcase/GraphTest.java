@@ -11,7 +11,7 @@ import pageEvents.HomePage;
 import pageEvents.LoginPage;
 import utils.ExcelUtils;
 
-public class Graph extends BaseTest 
+public class GraphTest extends BaseTest 
 {
 	private LoginPage loginPage;
 	private HomePage homePage;
@@ -30,7 +30,7 @@ public class Graph extends BaseTest
 		loginPage.enterUsername(ExcelUtils.getCellData(4, 1));
 		loginPage.enterPassword(ExcelUtils.getCellData(4, 2));
 		loginPage.clickLoginButton();
-		loginPage.successfulLogin();
+		loginPage.verifySuccessfulLogin();
 		// Selecting device
 		homePage.selectDevice();
 		// history page

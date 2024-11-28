@@ -10,7 +10,7 @@ import utils.Constant;
 import utils.ExcelUtils;
 
 
-public class ForgotPassword extends BaseTest{
+public class ForgotPasswordTest extends BaseTest{
 	private LoginPage loginPage;
 	private ResetPasswordPage resetPass;
 	

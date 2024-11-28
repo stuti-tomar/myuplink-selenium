@@ -10,7 +10,7 @@
   <test thread-count="5" name="Test">
     <classes>
     
-    <class name="org.myuplink.testcase.Schedules"/>
+    <class name="org.myuplink.testcase.LoginTest"/>
       
     </classes>
   </test> <!-- Test -->

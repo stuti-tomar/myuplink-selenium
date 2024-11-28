@@ -12,7 +12,7 @@ import pageEvents.LoginPage;
 import pageEvents.SchedulePage;
 import utils.ExcelUtils;
 
-public class Schedules extends BaseTest {
+public class SchedulesTest extends BaseTest {
 	private LoginPage loginPage;
 	private HomePage homePage;
 	private SchedulePage schedulePage;
@@ -28,7 +28,7 @@ public class Schedules extends BaseTest {
 		loginPage.enterUsername(ExcelUtils.getCellData(1, 1));
 		loginPage.enterPassword(ExcelUtils.getCellData(1, 2));
 		loginPage.clickLoginButton();
-		loginPage.successfulLogin();
+		loginPage.verifySuccessfulLogin();
 		loginPage.selectLanguage();
 		homePage.selectDevice();
 		homePage.reachToSchedulePage();

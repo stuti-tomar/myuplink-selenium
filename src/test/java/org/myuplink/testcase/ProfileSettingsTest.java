@@ -7,7 +7,7 @@ import pageEvents.LoginPage;
 import pageEvents.HomePage;
 import pageEvents.ProfileSettingPage;
     
-    public class ProfileSettings extends BaseTest{
+    public class ProfileSettingsTest extends BaseTest{
 	
         @Test()
         

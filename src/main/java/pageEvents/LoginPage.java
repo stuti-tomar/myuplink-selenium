@@ -7,12 +7,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import pageObjects.LoginElements;
+import pageObjects.LoginPageElements;
 import pageObjects.HomePageElements;
 
 
 
-public class LoginPage extends AbstractComponent implements LoginElements
+public class LoginPage extends AbstractComponent implements LoginPageElements
 {
 	WebDriver driver;
 	public LoginPage(WebDriver driver)
@@ -29,8 +29,8 @@ public class LoginPage extends AbstractComponent implements LoginElements
     private WebElement ForgotPwdBtn;
     
     
-    @FindBy(xpath = USERNAME)
-    private WebElement usernameField;
+    @FindBy(xpath = EMAIL)
+    private WebElement emailField;
     
     @FindBy(xpath=PASSWORD)
     private WebElement passwordField;
@@ -42,12 +42,18 @@ public class LoginPage extends AbstractComponent implements LoginElements
     private WebElement loginButton;
     
     @FindBy(xpath=WRONG_CRED_MSG)
- 	private WebElement wrongCredentialPopup; 
+ 	private WebElement wrongCredentialMessage; 
     
     @FindBy(xpath=HomePageElements.PROFILE_BUTTON)
 	WebElement profileIcon;
-   
     
+    @FindBy(xpath=CONTINUE_WITH_EMAIL_BUTTON)
+    WebElement continueWithEmailButton;
+   
+    public void clickContinueWithEmailButton()
+    {
+    	continueWithEmailButton.click();
+    }
     public void acceptCookies() 
     {
     	click(acceptCookiesButton);
@@ -61,7 +67,7 @@ public class LoginPage extends AbstractComponent implements LoginElements
 
     public void enterUsername(String username) 
     {
-    	usernameField.sendKeys(username);
+    	emailField.sendKeys(username);
     }
 
     public void enterPassword(String password) 
@@ -77,7 +83,7 @@ public class LoginPage extends AbstractComponent implements LoginElements
     public void verifyIncorrectFormatEmailAndCorrectPwd() 
     {
 		String expected = "Username should be an e-mail address";
-		String actual=driver.findElement(By.className("inputComponent__error")).getText();
+		String actual=driver.findElement(By.xpath("//p[normalize-space()='Username should be an e-mail address']")).getText();
 		Assert.assertEquals(expected, actual);
 		if (expected.equalsIgnoreCase(actual)) {
 			System.out.println("Error message verified :" + expected);
@@ -87,11 +93,11 @@ public class LoginPage extends AbstractComponent implements LoginElements
     
     public void verifyBlankEmailAndBlankPwd() 
     {
-		String expectedUsernm = "Username is mandatory field";
-		String actualUsernm=driver.findElement(By.xpath("//p[normalize-space()='Username is mandatory field']")).getText();
+		String expectedUsernm = "Please enter your E-mail";
+		String actualUsernm=driver.findElement(By.xpath("//p[normalize-space()='Please enter your E-mail']")).getText();
 		
-		String expectedPwd = "Password is a mandatory field";
-		String actualPwd=driver.findElement(By.xpath("//p[normalize-space()='Password is a mandatory field']")).getText();
+		String expectedPwd = "Please enter your password";
+		String actualPwd=driver.findElement(By.xpath("//p[normalize-space()='Please enter your password']")).getText();
 		Assert.assertEquals(expectedUsernm, actualUsernm);
 		if (actualUsernm.equalsIgnoreCase(actualUsernm)) 
 		{
@@ -104,14 +110,13 @@ public class LoginPage extends AbstractComponent implements LoginElements
     
    
 		
-		 public void wrongCredentials() throws InterruptedException 
+		 public void verifyWrongCredentials() throws InterruptedException 
 		    {
 				//String expected = "Invalid username or password";
 				//waitForElementToAppear(wrongCredentialPopup);
 			 Thread.sleep(4000);
-				WebElement actual=wrongCredentialPopup; 
 				
-				Assert.assertEquals(actual.getText(),"Invalid username or password");
+				Assert.assertEquals(wrongCredentialMessage.getText(),"Invalid username or password.");
 				/*if (actual.equalsIgnoreCase(actual)) 
 				{
 					
@@ -119,7 +124,7 @@ public class LoginPage extends AbstractComponent implements LoginElements
 				}*/
 		    }
 				
-		public void successfulLogin() throws InterruptedException 
+		public void verifySuccessfulLogin() throws InterruptedException 
 				  {
 					 String expectedUrl ="https://stageweb.nibejpi.com/";
 					 Thread.sleep(3000);

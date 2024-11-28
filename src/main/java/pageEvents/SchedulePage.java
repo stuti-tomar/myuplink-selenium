@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import pageObjects.DynamicLocators;
+import pageObjects.DynamicElements;
 import pageObjects.SchedulePageElements;
 
 public class SchedulePage extends AbstractComponent implements SchedulePageElements {
@@ -88,7 +88,7 @@ public class SchedulePage extends AbstractComponent implements SchedulePageEleme
 
 	public void addScheduleEvent(String weekDay, String desiredModeName) throws InterruptedException {
 
-		WebElement addButton = driver.findElement(By.xpath(DynamicLocators.getAddButton(weekDay)));
+		WebElement addButton = driver.findElement(By.xpath(DynamicElements.getAddButton(weekDay)));
 		scroll(addButton);
 		addButton.click();
 
@@ -165,9 +165,9 @@ public class SchedulePage extends AbstractComponent implements SchedulePageEleme
 			String desiredEndTime) throws InterruptedException {
 		Thread.sleep(2000);
 
-		String modeNameXPath = DynamicLocators.getModeNameXPath(weekDay, desiredModeName);
-		String startTimeXPath = DynamicLocators.getStartTimeXPath(weekDay, desiredModeName);
-		String endTimeXPath = DynamicLocators.getEndTimeXPath(weekDay, desiredModeName);
+		String modeNameXPath = DynamicElements.getModeNameXPath(weekDay, desiredModeName);
+		String startTimeXPath = DynamicElements.getStartTimeXPath(weekDay, desiredModeName);
+		String endTimeXPath = DynamicElements.getEndTimeXPath(weekDay, desiredModeName);
 
 		List<WebElement> modeNameElements = driver.findElements(By.xpath(modeNameXPath));
 		List<WebElement> startTimeElements = driver.findElements(By.xpath(startTimeXPath));
@@ -210,10 +210,10 @@ public class SchedulePage extends AbstractComponent implements SchedulePageEleme
 		{
 			throw new AssertionError("Data cannot be copied into same day");
 		}
-		WebElement sourceDay = driver.findElement(By.xpath(DynamicLocators.getSouceDayCopyButton(sourceWeekDay)));
+		WebElement sourceDay = driver.findElement(By.xpath(DynamicElements.getSouceDayCopyButton(sourceWeekDay)));
 		sourceDay.click();
 		Thread.sleep(3000);
-		WebElement destinationDay = driver.findElement(By.xpath(DynamicLocators.getDestinationDayToBeCopied(destinationWeekDay)));
+		WebElement destinationDay = driver.findElement(By.xpath(DynamicElements.getDestinationDayToBeCopied(destinationWeekDay)));
 		destinationDay.click();
 		copyButton.click();
 	}
@@ -221,15 +221,15 @@ public class SchedulePage extends AbstractComponent implements SchedulePageEleme
 	public void verifyScheduleCopiedData(String sourceWeekDay, String destinationWeekDay) throws InterruptedException {  
 		
 		
-		List<WebElement> sourceDayData = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(DynamicLocators.getSourceDayData(sourceWeekDay))));
+		List<WebElement> sourceDayData = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(DynamicElements.getSourceDayData(sourceWeekDay))));
 		
-		List<WebElement> destinationDayData = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(DynamicLocators.getDestinationDayData(destinationWeekDay))));
+		List<WebElement> destinationDayData = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(DynamicElements.getDestinationDayData(destinationWeekDay))));
 		
-		List<WebElement> sourceStartTime = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(DynamicLocators.getSourceDayStartTime(sourceWeekDay))));
-		List<WebElement> sourceEndTime = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(DynamicLocators.getSourceDayEndTime(sourceWeekDay))));
+		List<WebElement> sourceStartTime = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(DynamicElements.getSourceDayStartTime(sourceWeekDay))));
+		List<WebElement> sourceEndTime = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(DynamicElements.getSourceDayEndTime(sourceWeekDay))));
 
-		List<WebElement> destinationStartTime = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(DynamicLocators.getDestinationDayStartTime(destinationWeekDay))));
-	    List<WebElement> destinationEndTime = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(DynamicLocators.getDestinationDayEndTime(destinationWeekDay))));
+		List<WebElement> destinationStartTime = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(DynamicElements.getDestinationDayStartTime(destinationWeekDay))));
+	    List<WebElement> destinationEndTime = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(DynamicElements.getDestinationDayEndTime(destinationWeekDay))));
 		
 		
 		 if (sourceDayData.size() != destinationDayData.size() || sourceStartTime.size() != destinationStartTime.size()

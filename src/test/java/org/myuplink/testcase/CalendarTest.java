@@ -13,7 +13,7 @@ import pageEvents.HomePage;
 import pageEvents.LoginPage;
 import utils.ExcelUtils;
 
-public class Calendar extends BaseTest {
+public class CalendarTest extends BaseTest {
 
 	private LoginPage loginPage;
 	private HistoryPage historyPage;
@@ -29,7 +29,7 @@ public class Calendar extends BaseTest {
 		loginPage.enterUsername(ExcelUtils.getCellData(4, 1));
 		loginPage.enterPassword(ExcelUtils.getCellData(4, 2));
 		loginPage.clickLoginButton();
-		loginPage.successfulLogin();
+		loginPage.verifySuccessfulLogin();
 		// Selecting device
 		homePage.selectDevice();
 

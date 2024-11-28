@@ -9,7 +9,7 @@ import pageEvents.NotificationsPage;
 import utils.Constant;
 import utils.ExcelUtils;
     
-    public class HandlingNotifications extends BaseTest
+    public class NotificationsTest extends BaseTest
     {
     	NotificationsPage notifications=new NotificationsPage(driver);
     	LoginPage loginPage=new LoginPage(driver);
@@ -23,7 +23,7 @@ import utils.ExcelUtils;
     		loginPage.enterUsername(ExcelUtils.getCellData(4, 1));
     		loginPage.enterPassword(ExcelUtils.getCellData(4, 2));
     		loginPage.clickLoginButton();
-    		loginPage.successfulLogin();  
+    		loginPage.verifySuccessfulLogin();  
     		notifications.reachNotificationTab();    		
     	}
     	

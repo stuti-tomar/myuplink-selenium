@@ -8,7 +8,7 @@ import utils.Constant;
 import pageEvents.LoginPage;
 import utils.ExcelUtils;
 
-public class Login extends BaseTest {
+public class LoginTest extends BaseTest {
 	
 	private LoginPage loginPage;
 	
@@ -25,7 +25,7 @@ public class Login extends BaseTest {
 
 	public void testInvalidFormatEmailAndCorrectPwd() throws Exception 
 	{
-		
+		loginPage.clickContinueWithEmailButton();
 		loginPage.enterUsername(ExcelUtils.getCellData(1, 1));
 		loginPage.enterPassword(ExcelUtils.getCellData(1, 2));
 		loginPage.clickLoginButton();
@@ -37,6 +37,7 @@ public class Login extends BaseTest {
 
 	public void testBlankUserNameAndBlankPassword() throws Exception 
 	{
+		loginPage.clickContinueWithEmailButton();
 		loginPage.enterUsername(ExcelUtils.getCellData(2, 1));
 		loginPage.enterPassword(ExcelUtils.getCellData(2, 2));
 		loginPage.clickLoginButton();
@@ -47,22 +48,25 @@ public class Login extends BaseTest {
 
 	public void testWrongCredentials() throws Exception 
 	{
-		
+		loginPage.clickContinueWithEmailButton();		
 		loginPage.enterUsername(ExcelUtils.getCellData(3, 1));
-		loginPage.enterPassword(ExcelUtils.getCellData(3, 2));		
+		//loginPage.enterPassword(ExcelUtils.getCellData(3, 2));	
+		loginPage.enterPassword("whjwhbdbws");	
 		loginPage.clickLoginButton();
 		Thread.sleep(5000);
-		loginPage.wrongCredentials();
+		loginPage.verifyWrongCredentials();
 	}
 
 	@Test(priority = 4, description="scenario with correct email and correct password")
 
 	public void testSuccessfulLogin() throws Exception 
 	{
+		loginPage.clickContinueWithEmailButton();
 		loginPage.enterUsername(ExcelUtils.getCellData(4, 1));
 		loginPage.enterPassword(ExcelUtils.getCellData(4, 2));
 		loginPage.clickLoginButton();
-		loginPage.successfulLogin();
+		loginPage.verifySuccessfulLogin();
+		
 
 	}
 

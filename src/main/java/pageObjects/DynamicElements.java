@@ -1,6 +1,6 @@
 package pageObjects;
 
-public class DynamicLocators {
+public class DynamicElements {
 
 	public static String getBaseXPath(String weekDay) {
 		return "//div[@class='device-scheduling__item'][h3/span='" + weekDay

@@ -1,33 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="tests" thread-count="10">
-<listeners >
-<listener class-name="utils.Listeners"></listener>
-
-</listeners>
-<parameter name="browser" value="chrome"></parameter>
-
+<suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-    
-    <class name="org.myuplink.testcase.LoginTest"/>
-      
+      <class name="org.myuplink.testcase.LoginTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

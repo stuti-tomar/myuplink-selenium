@@ -30,7 +30,6 @@ public class LoginTest extends BaseTest {
 		loginPage.enterPassword(ExcelUtils.getCellData(1, 2));
 		loginPage.clickLoginButton();
 		loginPage.verifyIncorrectFormatEmailAndCorrectPwd();
-
 	}
 
 	@Test(priority = 2, description="scenario with blank email and blank password")
@@ -57,7 +56,7 @@ public class LoginTest extends BaseTest {
 		loginPage.verifyWrongCredentials();
 	}
 
-	/*
+	
 	@Test(priority = 4, description="scenario with correct email and correct password")
 
 	public void testSuccessfulLogin() throws Exception 
@@ -67,8 +66,6 @@ public class LoginTest extends BaseTest {
 		loginPage.enterPassword(ExcelUtils.getCellData(4, 2));
 		loginPage.clickLoginButton();
 		loginPage.verifySuccessfulLogin();
-		
-
-	}*/
+	}
 
 }

@@ -6,11 +6,8 @@
       <class name="org.myuplink.testcase.LoginTest">
         <methods>
           <include name="tearDown"/>
-          <include name="testInvalidFormatEmailAndCorrectPwd"/>
           <include name="browserSetup"/>
           <include name="testSuccessfulLogin"/>
-          <include name="testBlankUserNameAndBlankPassword"/>
-          <include name="testWrongCredentials"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- org.myuplink.testcase.LoginTest -->

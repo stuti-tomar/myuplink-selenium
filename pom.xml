@@ -11,6 +11,13 @@
     <version>4.12.1</version>
 </dependency>
 
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-devtools-v86</artifactId>
+    <version>4.12.1</version>
+</dependency>
+</dependency>
+
 		<!-- https://mvnrepository.com/artifact/com.applitools/eyes-selenium-java3 -->
 		<dependency>
 			<groupId>com.applitools</groupId>

@@ -25,7 +25,7 @@ public class BaseTest {
 	    // Check if we are running in Jenkins or locally
 	    if (System.getenv("JENKINS_HOME") != null) {
 	        // Jenkins environment
-	        chromeDriverPath = "C:/ProgramData/Jenkins/tools/new/chromedriver.exe";
+	        chromeDriverPath = "C:/ProgramData/Jenkins/tools/chromedriver/chromedriver.exe";
 	    } else {
 	        // Local environment (set the path of local machine)
 	        chromeDriverPath = "C:\\Users\\91701\\.cache\\selenium\\chromedriver\\win64\\131.0.6778.85\\chromedriver.exe"; // update this path

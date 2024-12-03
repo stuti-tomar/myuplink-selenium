@@ -6,10 +6,10 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-devtools-v131</artifactId>
-			<version>4.11.0</version>
-		</dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.12.1</version>
+</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.applitools/eyes-selenium-java3 -->
 		<dependency>

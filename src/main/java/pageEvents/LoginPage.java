@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import pageObjects.LoginPageElements;
+import utils.WaitUtils;
 import pageObjects.HomePageElements;
 
 
@@ -15,11 +16,13 @@ import pageObjects.HomePageElements;
 public class LoginPage extends AbstractComponent implements LoginPageElements
 {
 	WebDriver driver;
+	WaitUtils waitUtils;
 	public LoginPage(WebDriver driver)
 	{
 		super(driver);
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
+		waitUtils=new WaitUtils(driver);
 	}
 	
     @FindBy(id = ACCEPT_COOKIES_BUTTON)
@@ -85,10 +88,6 @@ public class LoginPage extends AbstractComponent implements LoginPageElements
 		String expected = "Username should be an e-mail address";
 		String actual=driver.findElement(By.xpath("//p[normalize-space()='Username should be an e-mail address']")).getText();
 		Assert.assertEquals(expected, actual);
-		if (expected.equalsIgnoreCase(actual)) {
-			System.out.println("Error message verified :" + expected);
-			
-		}
 	}
     
     public void verifyBlankEmailAndBlankPwd() 
@@ -112,30 +111,17 @@ public class LoginPage extends AbstractComponent implements LoginPageElements
 		
 		 public void verifyWrongCredentials() throws InterruptedException 
 		    {
-				//String expected = "Invalid username or password";
-				//waitForElementToAppear(wrongCredentialPopup);
-			 Thread.sleep(4000);
+				waitUtils.waitForVisibilityOfElement(wrongCredentialMessage);
 				
 				Assert.assertEquals(wrongCredentialMessage.getText(),"Invalid username or password.");
-				/*if (actual.equalsIgnoreCase(actual)) 
-				{
-					
-					System.out.println("Error message verified :" +expected);
-				}*/
 		    }
 				
 		public void verifySuccessfulLogin() throws InterruptedException 
 				  {
 					 String expectedUrl ="https://stageweb.nibejpi.com/";
-					 Thread.sleep(3000);
-					 waitForElementToAppear(profileIcon);
+					 waitUtils.waitForVisibilityOfElement(profileIcon);
 		                String actualUrl=driver.getCurrentUrl();
 		                Assert.assertEquals(actualUrl, expectedUrl);
-		                
-		                if(actualUrl.equalsIgnoreCase(expectedUrl))
-		                {
-		                	System.out.println("Logged in");
-		                } 
 	}
 		
 		public void selectLanguage()

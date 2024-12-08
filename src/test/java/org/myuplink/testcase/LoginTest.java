@@ -48,11 +48,9 @@ public class LoginTest extends BaseTest {
 	public void testWrongCredentials() throws Exception 
 	{
 		loginPage.clickContinueWithEmailButton();		
-		loginPage.enterUsername(ExcelUtils.getCellData(3, 1));
-		//loginPage.enterPassword(ExcelUtils.getCellData(3, 2));	
+		loginPage.enterUsername(ExcelUtils.getCellData(3, 1));	
 		loginPage.enterPassword("whjwhbdbws");	
 		loginPage.clickLoginButton();
-		Thread.sleep(5000);
 		loginPage.verifyWrongCredentials();
 	}
 
@@ -65,7 +63,7 @@ public class LoginTest extends BaseTest {
 		loginPage.enterUsername(ExcelUtils.getCellData(4, 1));
 		loginPage.enterPassword(ExcelUtils.getCellData(4, 2));
 		loginPage.clickLoginButton();
-		//loginPage.verifySuccessfulLogin();
+		loginPage.verifySuccessfulLogin();
 	}
 
 }

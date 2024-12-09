@@ -11,11 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class AbstractComponent {
 	WebDriver driver;
 	
-	
-	
 	public AbstractComponent(WebDriver driver) {
 		this.driver=driver;
-		// TODO Auto-generated constructor stub
 	}
 
 	public void waitForElementToAppear(WebElement element)

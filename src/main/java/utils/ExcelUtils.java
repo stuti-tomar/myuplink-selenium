@@ -1,7 +1,5 @@
 package utils;
 
- 
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
@@ -76,7 +74,6 @@ public class ExcelUtils {
     public static void setCellData(String Result, int RowNum, int ColNum) throws Exception {
         try {
             Row = ExcelWSheet.getRow(RowNum);
-            // Cell = Row.getCell(ColNum, Row.RETURN_BLANK_AS_NULL);
             if (Cell == null) {
                 Cell = Row.createCell(ColNum);
                 Cell.setCellValue(Result);
@@ -97,14 +94,12 @@ public class ExcelUtils {
  
 
     public static int getRowCount() {
-        // TODO Auto-generated method stub
         return 0;
     }
 
  
 
     public static int getColumnCount() {
-        // TODO Auto-generated method stub
         return 0;
     }
 }

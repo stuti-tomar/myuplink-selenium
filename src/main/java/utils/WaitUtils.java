@@ -1,5 +1,7 @@
 package utils;
 
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.List;
 
@@ -8,6 +10,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
 
 public class WaitUtils {
 
@@ -35,5 +40,9 @@ public class WaitUtils {
 	public WebElement waitForClickability(WebElement element) {
 		return wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
+	
+	
+
+	
 
 }

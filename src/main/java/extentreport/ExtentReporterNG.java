@@ -6,8 +6,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public class ExtentReporterNG {
 	
 	public static ExtentReports getReportObject()
-	{
-		
+	{		
 		String path=System.getProperty("user.dir") + "//reports//UplinkExtentReport.html";
 		ExtentSparkReporter sparkReporter = new ExtentSparkReporter(path);
 		sparkReporter.config().setReportName("Test Reports");

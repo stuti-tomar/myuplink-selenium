@@ -83,6 +83,7 @@ public class LoginPage extends WaitUtils implements LoginPageElements {
 	        
 	        acceptCookiesButton.click();
 	    } catch (Exception e) {
+	    	waitForVisibilityOfElement(acceptCookiesButton);
 	        // If the direct click fails, retry with the retry logic
 	        System.out.println("Direct click failed. Retrying...");
 	        js.clickWithRetry(acceptCookiesButton);

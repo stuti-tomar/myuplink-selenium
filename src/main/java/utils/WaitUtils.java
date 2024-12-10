@@ -4,6 +4,7 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -40,9 +41,14 @@ public class WaitUtils {
 	public WebElement waitForClickability(WebElement element) {
 		return wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
-	
-	
 
-	
+	public void waitForSeconds(int seconds) {
+		try {
+			TimeUnit.SECONDS.sleep(seconds);
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+			e.printStackTrace();
+		}
+	}
 
 }

@@ -28,7 +28,7 @@ public class ForgotPasswordTest extends BaseTest{
     public void testBlankEmail() throws Exception 
     {
         
-        loginPage.clickForgotPwdBtn();
+        loginPage.clickForgotPasswordButton();
         
         
         resetPass.clickResetPasswordButton();
@@ -41,7 +41,7 @@ public class ForgotPasswordTest extends BaseTest{
     public void testWrongFormatEmail() throws Exception 
     {
 
-        loginPage.clickForgotPwdBtn();
+        loginPage.clickForgotPasswordButton();
         Thread.sleep(2000);
         resetPass.enterResetEmail(ExcelUtils.getCellData(2, 1));
         resetPass.clickResetPasswordButton();
@@ -54,7 +54,7 @@ public class ForgotPasswordTest extends BaseTest{
     public void testCorrectResetEmail() throws Exception 
     {
         
-         loginPage.clickForgotPwdBtn();
+         loginPage.clickForgotPasswordButton();
          resetPass.enterResetEmail(ExcelUtils.getCellData(3, 1));
         resetPass.clickResetPasswordButton();
         resetPass.verifyMsgWithCorrectResetEmail();

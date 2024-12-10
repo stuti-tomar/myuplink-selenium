@@ -28,7 +28,7 @@ public final class Constant {
 	public static final String url="https://stageweb.nibejpi.com/";
 	
 	//username and password to login
-	public static final String username="rishimishra2999@gmail.com";
+	public static final String email="rishimishra2999@gmail.com";
 	public static final String password="ruhe mryc chge idlh";
 	
 	// IMAP server for Gmail

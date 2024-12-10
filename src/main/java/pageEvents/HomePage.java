@@ -5,11 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
 import pageObjects.HomePageElements;
+import utils.WaitUtils;
 
 
 
-public class HomePage extends AbstractComponent implements HomePageElements
+public class HomePage extends WaitUtils implements HomePageElements
 {
 	WebDriver driver;
 	public HomePage(WebDriver driver)
@@ -24,7 +27,7 @@ public class HomePage extends AbstractComponent implements HomePageElements
     
   
     @FindBy(xpath=PROFILE_BUTTON)
-    private WebElement profileBtn;
+    private WebElement profileButton;
     
     @FindBy(xpath=SYSTEM_BUTTON)
     private WebElement systemBtn;
@@ -33,10 +36,18 @@ public class HomePage extends AbstractComponent implements HomePageElements
     @FindBy(xpath=HISTORY_bUTTON)
     private WebElement historyBtn;
     
+    @FindBy(xpath=SELECT_LANGUAGE)
+    private WebElement selectLanguageDropdown;
+    
     public void reachToSchedulePage()
     {
     	scheduleButton.click();
     	
+    }
+    
+    public void verifyVisibilityOfProfileIcon()
+    {
+    	waitForVisibilityOfElement(profileButton);
     }
     
     
@@ -44,7 +55,7 @@ public class HomePage extends AbstractComponent implements HomePageElements
     
     public void clickProfileBtn()
     {
-    	profileBtn.click();
+    	profileButton.click();
     }
     
    public void moveToHistoryPage()
@@ -53,9 +64,9 @@ public class HomePage extends AbstractComponent implements HomePageElements
 	   historyBtn.click();
    }
    
-   public void handlinSavePassword()
-   {
-	   
+   public void selectLanguage() {
+		Select language = new Select(selectLanguageDropdown);
+		language.selectByVisibleText("English");
    }
    
    public void selectDevice() throws InterruptedException 

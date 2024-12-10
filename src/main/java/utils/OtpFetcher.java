@@ -9,14 +9,16 @@ import javax.mail.Session;
 import javax.mail.Store;
 import javax.mail.internet.MimeMultipart;
 import javax.mail.search.FlagTerm;
+
 import javax.mail.*;
 
 public class OtpFetcher 
 {
 	public String fetchOtpFromEmail() 
 	{ 
+		
 		        String host = Constant.host;  
-		        String username = Constant.username;  
+		        String username = Constant.email;  
 		        String password = Constant.password;  
 
 		        Properties properties = new Properties();

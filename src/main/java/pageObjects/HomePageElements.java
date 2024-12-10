@@ -9,6 +9,7 @@ public interface HomePageElements {
 	String SCHEDULE_BUTTON="//span[normalize-space()='Scheduling']";
 	String SYSTEM_BUTTON="//span[normalize-space()='System']";
 	String HISTORY_bUTTON="//span[normalize-space()='History']";
+	String SELECT_LANGUAGE="//select[@class='languageSelector__selectControl']";
 	
 	
 	

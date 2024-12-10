@@ -1,6 +1,8 @@
 package utils;
 
 import java.time.Duration;
+
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -34,28 +36,22 @@ public class JSExecutorUtils {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 	}
-
-	// staleElement exception handling
+	
 	public void clickWithRetry(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		for (int attempt = 0; attempt < 3; attempt++) {
-			try {
-				// Scroll the element into view
-				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-
-				// Wait for the element to be clickable
-				wait.until(ExpectedConditions.elementToBeClickable(element));
-
-				// Click the element
-				element.click();
-				return; // Exit the loop if click is successful
-			} catch (StaleElementReferenceException e) {
-				System.out.println("Stale element encountered. Retrying...");
-				// Re-fetch the element in case of a stale exception
-				element = wait.until(ExpectedConditions.elementToBeClickable(element));
-			}
-		}
-		throw new RuntimeException("Failed to click element after 3 retries");
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    for (int attempt = 0; attempt < 3; attempt++) {
+	        try {
+	            // Ensure the element is clickable
+	            wait.until(ExpectedConditions.elementToBeClickable(element));
+	            
+	            // Click the element
+	            element.click();
+	            return; // Exit if successful
+	        } catch (ElementClickInterceptedException | StaleElementReferenceException e) {
+	            System.out.println("Retrying click on element. Attempt: " + (attempt + 1));
+	        }
+	    }
+	    throw new RuntimeException("Failed to click element after 3 retries.");
+	}
 	}
 
-}

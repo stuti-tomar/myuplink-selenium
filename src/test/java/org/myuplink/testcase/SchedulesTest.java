@@ -29,7 +29,7 @@ public class SchedulesTest extends BaseTest {
 		loginPage.enterPassword(ExcelUtils.getCellData(1, 2));
 		loginPage.clickLoginButton();
 		loginPage.verifySuccessfulLogin();
-		loginPage.selectLanguage();
+		homePage.selectLanguage();
 		homePage.selectDevice();
 		homePage.reachToSchedulePage();
 		schedulePage.scrollToSchedule();

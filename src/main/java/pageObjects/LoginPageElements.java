@@ -2,7 +2,7 @@ package pageObjects;
 
 public interface LoginPageElements {
 	
-	String ACCEPT_COOKIES_BUTTON="//button[normalize-space()='Accept All ✓']";
+	String ACCEPT_COOKIES_BUTTON="//button[contains(text(),'Accept All')]";
 	String EMAIL_FIELD="//input[@type='email']";
 	String PASSWORD_FIELD="//input[@type='password']";
 	String WRONG_EMAIL_MESSAGE="inputComponent__error";

@@ -1,151 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-10T11:25:56 IST" name="Default suite" finished-at="2024-12-10T11:27:14 IST" duration-ms="78667">
+  <suite started-at="2024-12-10T11:33:43 IST" name="Default suite" finished-at="2024-12-10T11:33:56 IST" duration-ms="13073">
     <groups>
     </groups>
-    <test started-at="2024-12-10T11:25:56 IST" name="Default test" finished-at="2024-12-10T11:27:14 IST" duration-ms="78667">
+    <test started-at="2024-12-10T11:33:43 IST" name="Default test" finished-at="2024-12-10T11:33:56 IST" duration-ms="13073">
       <class name="org.myuplink.testcase.LoginTest">
-        <test-method is-config="true" signature="browserSetup()[pri:0, instance:org.myuplink.testcase.LoginTest@70325e14]" started-at="2024-12-10T11:25:56 IST" name="browserSetup" finished-at="2024-12-10T11:26:02 IST" duration-ms="6113" status="PASS">
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:org.myuplink.testcase.LoginTest@6f4a47c7]" started-at="2024-12-10T11:33:43 IST" name="browserSetup" finished-at="2024-12-10T11:33:47 IST" duration-ms="3606" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.myuplink.testcase.LoginTest@70325e14]" started-at="2024-12-10T11:26:02 IST" name="setUp" finished-at="2024-12-10T11:26:05 IST" duration-ms="2736" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.myuplink.testcase.LoginTest@6f4a47c7]" started-at="2024-12-10T11:33:47 IST" name="setUp" finished-at="2024-12-10T11:33:54 IST" duration-ms="7537" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testInvalidFormatEmailAndCorrectPwd()[pri:1, instance:org.myuplink.testcase.LoginTest@70325e14]" started-at="2024-12-10T11:26:05 IST" name="testInvalidFormatEmailAndCorrectPwd" description="scenario with invalid format of email and correct password" finished-at="2024-12-10T11:26:06 IST" duration-ms="1471" status="PASS">
+        <test-method signature="testInvalidFormatEmailAndCorrectPwd()[pri:1, instance:org.myuplink.testcase.LoginTest@6f4a47c7]" started-at="2024-12-10T11:33:54 IST" name="testInvalidFormatEmailAndCorrectPwd" description="scenario with invalid format of email and correct password" finished-at="2024-12-10T11:33:56 IST" duration-ms="1532" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidFormatEmailAndCorrectPwd -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.myuplink.testcase.LoginTest@70325e14]" started-at="2024-12-10T11:26:06 IST" name="tearDown" finished-at="2024-12-10T11:26:06 IST" duration-ms="322" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="browserSetup()[pri:0, instance:org.myuplink.testcase.LoginTest@70325e14]" started-at="2024-12-10T11:26:06 IST" name="browserSetup" finished-at="2024-12-10T11:26:10 IST" duration-ms="3528" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserSetup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.myuplink.testcase.LoginTest@70325e14]" started-at="2024-12-10T11:26:10 IST" name="setUp" finished-at="2024-12-10T11:26:13 IST" duration-ms="3165" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testBlankUserNameAndBlankPassword()[pri:2, instance:org.myuplink.testcase.LoginTest@70325e14]" started-at="2024-12-10T11:26:13 IST" name="testBlankUserNameAndBlankPassword" description="scenario with blank email and blank password" finished-at="2024-12-10T11:26:14 IST" duration-ms="1268" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testBlankUserNameAndBlankPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.myuplink.testcase.LoginTest@70325e14]" started-at="2024-12-10T11:26:14 IST" name="tearDown" finished-at="2024-12-10T11:26:15 IST" duration-ms="255" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="browserSetup()[pri:0, instance:org.myuplink.testcase.LoginTest@70325e14]" started-at="2024-12-10T11:26:15 IST" name="browserSetup" finished-at="2024-12-10T11:26:18 IST" duration-ms="3607" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserSetup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.myuplink.testcase.LoginTest@70325e14]" started-at="2024-12-10T11:26:18 IST" name="setUp" finished-at="2024-12-10T11:26:21 IST" duration-ms="3056" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testWrongCredentials()[pri:3, instance:org.myuplink.testcase.LoginTest@70325e14]" started-at="2024-12-10T11:26:21 IST" name="testWrongCredentials" description="scenario with wrong email or password" finished-at="2024-12-10T11:26:43 IST" duration-ms="21815" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=131.0.6778.86)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [62f03d78c753fb15b8af28d9bb477821, findElement {using=xpath, value=//div[@class='error pageLevel']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\91701\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50617}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50617/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 62f03d78c753fb15b8af28d9bb477821]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=131.0.6778.86)
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [62f03d78c753fb15b8af28d9bb477821, findElement {using=xpath, value=//div[@class='error pageLevel']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\91701\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50617}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50617/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 62f03d78c753fb15b8af28d9bb477821
-at jdk.internal.reflect.GeneratedConstructorAccessor24.newInstance(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy12.toString(Unknown Source)
-at java.base/java.lang.String.valueOf(String.java:4222)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:295)
-at java.base/java.lang.String.valueOf(String.java:4222)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:225)
-at utils.WaitUtils.waitForVisibilityOfElement(WaitUtils.java:31)
-at pageEvents.LoginPage.verifyWrongCredentials(LoginPage.java:159)
-at org.myuplink.testcase.LoginTest.testWrongCredentials(LoginTest.java:51)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testWrongCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.myuplink.testcase.LoginTest@70325e14]" started-at="2024-12-10T11:26:43 IST" name="tearDown" finished-at="2024-12-10T11:26:43 IST" duration-ms="106" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="browserSetup()[pri:0, instance:org.myuplink.testcase.LoginTest@70325e14]" started-at="2024-12-10T11:26:43 IST" name="browserSetup" finished-at="2024-12-10T11:26:47 IST" duration-ms="3801" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserSetup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.myuplink.testcase.LoginTest@70325e14]" started-at="2024-12-10T11:26:47 IST" name="setUp" finished-at="2024-12-10T11:26:51 IST" duration-ms="3772" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testSuccessfulLogin()[pri:4, instance:org.myuplink.testcase.LoginTest@70325e14]" started-at="2024-12-10T11:26:51 IST" name="testSuccessfulLogin" description="scenario with correct email and correct password" finished-at="2024-12-10T11:27:14 IST" duration-ms="23261" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSuccessfulLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.myuplink.testcase.LoginTest@70325e14]" started-at="2024-12-10T11:27:14 IST" name="tearDown" finished-at="2024-12-10T11:27:14 IST" duration-ms="329" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.myuplink.testcase.LoginTest@6f4a47c7]" started-at="2024-12-10T11:33:56 IST" name="tearDown" finished-at="2024-12-10T11:33:56 IST" duration-ms="360" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

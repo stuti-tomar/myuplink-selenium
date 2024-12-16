@@ -2,28 +2,28 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-10T11:33:43 IST" name="Default suite" finished-at="2024-12-10T11:33:56 IST" duration-ms="13073">
+  <suite started-at="2024-12-11T12:40:38 IST" name="Default suite" finished-at="2024-12-11T12:40:47 IST" duration-ms="8529">
     <groups>
     </groups>
-    <test started-at="2024-12-10T11:33:43 IST" name="Default test" finished-at="2024-12-10T11:33:56 IST" duration-ms="13073">
-      <class name="org.myuplink.testcase.LoginTest">
-        <test-method is-config="true" signature="browserSetup()[pri:0, instance:org.myuplink.testcase.LoginTest@6f4a47c7]" started-at="2024-12-10T11:33:43 IST" name="browserSetup" finished-at="2024-12-10T11:33:47 IST" duration-ms="3606" status="PASS">
+    <test started-at="2024-12-11T12:40:38 IST" name="Default test" finished-at="2024-12-11T12:40:47 IST" duration-ms="8529">
+      <class name="org.myuplink.testcase.SchedulesTest">
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:org.myuplink.testcase.SchedulesTest@7494f96a]" started-at="2024-12-11T12:40:38 IST" name="browserSetup" finished-at="2024-12-11T12:40:43 IST" duration-ms="5165" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.myuplink.testcase.LoginTest@6f4a47c7]" started-at="2024-12-10T11:33:47 IST" name="setUp" finished-at="2024-12-10T11:33:54 IST" duration-ms="7537" status="PASS">
+        <test-method is-config="true" signature="reachToSchedulePage()[pri:0, instance:org.myuplink.testcase.SchedulesTest@7494f96a]" started-at="2024-12-11T12:40:43 IST" name="reachToSchedulePage" description="Reaching to Schedule page" finished-at="2024-12-11T12:40:43 IST" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testInvalidFormatEmailAndCorrectPwd()[pri:1, instance:org.myuplink.testcase.LoginTest@6f4a47c7]" started-at="2024-12-10T11:33:54 IST" name="testInvalidFormatEmailAndCorrectPwd" description="scenario with invalid format of email and correct password" finished-at="2024-12-10T11:33:56 IST" duration-ms="1532" status="PASS">
+        </test-method> <!-- reachToSchedulePage -->
+        <test-method signature="handleContinueButton()[pri:0, instance:org.myuplink.testcase.SchedulesTest@7494f96a]" started-at="2024-12-11T12:40:43 IST" name="handleContinueButton" finished-at="2024-12-11T12:40:47 IST" duration-ms="3308" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testInvalidFormatEmailAndCorrectPwd -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.myuplink.testcase.LoginTest@6f4a47c7]" started-at="2024-12-10T11:33:56 IST" name="tearDown" finished-at="2024-12-10T11:33:56 IST" duration-ms="360" status="PASS">
+        </test-method> <!-- handleContinueButton -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.myuplink.testcase.SchedulesTest@7494f96a]" started-at="2024-12-11T12:40:47 IST" name="tearDown" finished-at="2024-12-11T12:40:47 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- org.myuplink.testcase.LoginTest -->
+      </class> <!-- org.myuplink.testcase.SchedulesTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

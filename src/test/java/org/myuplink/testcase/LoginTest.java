@@ -1,6 +1,11 @@
 package org.myuplink.testcase;
 
+import java.util.Set;
+
 import org.myuplink.base.BaseTest;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
+import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utils.Constant;
@@ -63,6 +68,42 @@ public class LoginTest extends BaseTest {
 		loginPage.enterEmailVerificationCode();
 		loginPage.verifySuccessfulLogin();
 	}
+	
+	@Test(description="scenario with correct email and correct password")
+
+	public void test() throws Exception 
+	{
+		loginPage.enterUsername(ExcelUtils.getCellData(4, 1));	
+		loginPage.enterPassword(ExcelUtils.getCellData(4, 2));
+		loginPage.clickLoginButton();
+		loginPage.clickSendCode();
+		loginPage.enterEmailVerificationCode();
+		loginPage.verifySuccessfulLogin();
+		Set<Cookie> cookies = driver.manage().getCookies();
+	    for (Cookie cookie : cookies) {
+	    	 driver.manage().deleteAllCookies(); // Clear all cookies
+
+	         // Add the current cookie
+	         driver.manage().addCookie(cookie);
+
+	         // Refresh the page
+	         driver.navigate().refresh();
+
+	         // Check if the user is logged in (e.g., URL or specific element)
+	         try {
+	             if (driver.findElement(By.xpath("//span[normalize-space()='System']")).isDisplayed()) {
+	                 System.out.println("Login bypassed successfully with cookie: " + cookie.getName());
+	                 System.out.println("Cookie Value: " + cookie.getValue());
+	                 break; // Exit once the correct cookie is found
+	             }
+	         } catch (NoSuchElementException e) {
+	             System.out.println("Cookie " + cookie.getName() + " did not bypass login.");
+	         }
+	     }
+	}
+	
+	
+	 
 	}
 	
 		

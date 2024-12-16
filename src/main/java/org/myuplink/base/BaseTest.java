@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.openqa.selenium.Cookie;
 
 import utils.Constant;
 
@@ -42,11 +43,30 @@ public class BaseTest {
 		driver = new ChromeDriver(options);
 		driver.get(Constant.url);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		// Add login bypass
+        if (shouldBypassLogin()) {
+            bypassLogin();
+        }
 	}
+	
+	 private boolean shouldBypassLogin() {
+	        // Return true if you want to bypass login (use an environment variable or flag)
+	        return true; // Set to false if you want to run regular login tests
+	    }
+	 
+	 private void bypassLogin() {
+	        // Add a session cookie to simulate login
+	        Cookie sessionCookie = new Cookie("session_id", "your-session-value"); // Replace with actual cookie name and value
+	        driver.manage().addCookie(sessionCookie);
+
+	        // Refresh to apply the cookie
+	        driver.navigate().refresh();
+	    }
 
 	@AfterMethod
 	public void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 
 	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {

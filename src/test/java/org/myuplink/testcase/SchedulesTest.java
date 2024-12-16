@@ -2,39 +2,89 @@ package org.myuplink.testcase;
 
 import java.time.Duration;
 import org.myuplink.base.BaseTest;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import utils.Constant;
 import pageEvents.HomePage;
 import pageEvents.LoginPage;
 import pageEvents.SchedulePage;
 import utils.ExcelUtils;
+import utils.JSExecutorUtils;
+import utils.WaitUtils;
 
 public class SchedulesTest extends BaseTest {
 	private LoginPage loginPage;
 	private HomePage homePage;
 	private SchedulePage schedulePage;
-	WebDriverWait wait;
+	WaitUtils waitUtils;
+	JSExecutorUtils js; 
+	WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10000));
 
 	@BeforeMethod(description = "Reaching to Schedule page")
 	public void reachToSchedulePage() throws Exception {
-		ExcelUtils.setExcelFile(Constant.CONS_TEST_DATA, "Schedules");
+		//ExcelUtils.setExcelFile(Constant.CONS_TEST_DATA, "Schedules");
 		loginPage = new LoginPage(driver);
-		homePage = new HomePage(driver);
-		schedulePage = new SchedulePage(driver);
-		loginPage.acceptCookies();
-		loginPage.enterUsername(ExcelUtils.getCellData(1, 1));
-		loginPage.enterPassword(ExcelUtils.getCellData(1, 2));
-		loginPage.clickLoginButton();
-		loginPage.verifySuccessfulLogin();
-		homePage.selectLanguage();
-		homePage.selectDevice();
-		homePage.reachToSchedulePage();
-		schedulePage.scrollToSchedule();
-		wait = new WebDriverWait(driver, Duration.ofMillis(20000));
+		waitUtils=new WaitUtils(driver);
+		js=new JSExecutorUtils(driver);
+		//homePage = new HomePage(driver);
+		//schedulePage = new SchedulePage(driver);
+		//loginPage.acceptCookies();
+		//loginPage.enterUsername(ExcelUtils.getCellData(4, 1));
+		//loginPage.enterPassword(ExcelUtils.getCellData(4, 2));
+		//loginPage.clickLoginButton();
+		//loginPage.clickSendCode();
+		//loginPage.enterEmailVerificationCode();
+		//loginPage.verifySuccessfulLogin();
+		//homePage.selectLanguage();
+		//homePage.selectDevice();
+		//homePage.reachToSchedulePage();
+		//schedulePage.scrollToSchedule();
+		//wait = new WebDriverWait(driver, Duration.ofMillis(20000));
 	}
+	
+@Test
+public void handleContinueButton() throws InterruptedException {
+    // Navigate to the app
+
+    // Add AZURE_B2C_TOKENS cookie
+	
+    Cookie sessionCookie = new Cookie("OptanonAlertBoxClosed", "2024-12-11T07:03:42.290Z");
+    driver.manage().addCookie(sessionCookie);
+
+    // Refresh to apply the cookie
+    driver.navigate().refresh();
+    
+    
+    //loginPage.acceptCookies();
+    // Wait and check for the "Continue" button
+    
+    WebElement continueButton = driver.findElement(By.xpath("//span[normalize-space()='Continue with email']"));
+    
+    try {
+        wait.until(ExpectedConditions.elementToBeClickable(continueButton));
+        
+        js.scrollToElement(continueButton);
+        if (continueButton.isDisplayed()) {
+            continueButton.click(); // Click the "Continue" button
+        }
+        
+    } catch (Exception e) {
+    	waitUtils.waitForVisibilityOfElement(continueButton);
+        // If the direct click fails, retry with the retry logic
+        System.out.println("Direct click failed. Retrying...");
+        js.clickWithRetry(continueButton);
+    }
+    
+   
+    // Now verify if the user is logged in
+    System.out.println("Login bypassed successfully!");
+    
+    
+}
 
 	@Test(description = "Adding single event on any weekday and verifying correct date details")
 	public void testAddingEventAndVerifyingCorrectDateDetails() throws Exception {

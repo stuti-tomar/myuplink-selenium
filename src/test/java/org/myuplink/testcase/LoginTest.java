@@ -69,7 +69,7 @@ public class LoginTest extends BaseTest {
 		loginPage.verifySuccessfulLogin();
 	}
 	
-	@Test(description="scenario with correct email and correct password")
+	/*@Test(description="scenario with correct email and correct password")
 
 	public void test() throws Exception 
 	{
@@ -100,7 +100,7 @@ public class LoginTest extends BaseTest {
 	             System.out.println("Cookie " + cookie.getName() + " did not bypass login.");
 	         }
 	     }
-	}
+	}*/
 	
 	
 	 

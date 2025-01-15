@@ -1,0 +1,7 @@
+org\myuplink\testcase\LoginTest.class
+org\myuplink\testcase\ProfileSettingsTest.class
+org\myuplink\testcase\SchedulesTest.class
+org\myuplink\testcase\CalendarTest.class
+org\myuplink\testcase\ForgotPasswordTest.class
+org\myuplink\testcase\NotificationsTest.class
+org\myuplink\testcase\GraphTest.class

@@ -102,11 +102,6 @@ public class LoginTest extends BaseTest {
 	     }
 	}*/
 	
-	//#####
-	//#kkkkk
-	//#qjjdndknmfd
-	//comment added
-	
 	
 	 
 	}

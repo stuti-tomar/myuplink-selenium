@@ -36,5 +36,6 @@ public interface GraphPageElements {
 		String CONTENT_NIBE="//div[normalize-space()='NIBE S1255-6 E EM 3X400V']";
 		String CONTENT_NIBE_PARAMTER_LIST=".parameter-title-container";
 		
+		//element added
 		
 }

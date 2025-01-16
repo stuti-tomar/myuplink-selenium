@@ -1,19 +1,25 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 101.581 s <<< FAILURE! - in TestSuite
-testSuccessfulLogin(org.myuplink.testcase.LoginTest)  Time elapsed: 51.195 s  <<< FAILURE!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[@aria-label='Profile Settings']' (tried for 20 second(s) with 500 milliseconds interval)
-	at org.myuplink.testcase.LoginTest.testSuccessfulLogin(LoginTest.java:69)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//button[@aria-label='Profile Settings']"}
-  (Session info: chrome=131.0.6778.265)
+Tests run: 10, Failures: 2, Errors: 0, Skipped: 7, Time elapsed: 26.867 s <<< FAILURE! - in TestSuite
+testBlankUserNameAndBlankPassword(org.myuplink.testcase.LoginTest)  Time elapsed: 0.08 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to find element with locator By.xpath: //input[@type='email']
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.27.0', revision: 'd6e718d134'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
+Driver info: driver.version: RemoteWebDriver
+	at org.myuplink.testcase.LoginTest.testBlankUserNameAndBlankPassword(LoginTest.java:43)
+
+browserSetup(org.myuplink.testcase.LoginTest)  Time elapsed: 1.696 s  <<< FAILURE!
+org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.265)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.13'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [31d3663e7f722261e12037e9decb822a, findElement {using=xpath, value=//button[@aria-label='Profile Settings']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\91701\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59336}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59336/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 31d3663e7f722261e12037e9decb822a
-	at org.myuplink.testcase.LoginTest.testSuccessfulLogin(LoginTest.java:69)
+Command: [9db9c66e58a55e3975253f141bb130ed, get {url=https://stageweb.nibejpi.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.85 (3d81e41b6f3a..., userDataDir: C:\Users\91701\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65069}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9db9c66e58a55e3975253f141bb130ed
 

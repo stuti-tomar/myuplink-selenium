@@ -8,6 +8,8 @@
           <include name="tearDown"/>
           <include name="browserSetup"/>
           <include name="testSuccessfulLogin"/>
+          <include name="testBlankUserNameAndBlankPassword"/>
+          <include name="testWrongCredentials"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- org.myuplink.testcase.LoginTest -->

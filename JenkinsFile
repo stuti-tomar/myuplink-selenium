@@ -1,28 +1,52 @@
 pipeline {
     agent any
     stages {
+		 // Step 1: Checkout Code from Repository
         stage('Checkout Code') {
             steps {
-                git branch: 'development', 
+				echo "Fetching the latest code from the repository..."
+                git branch: 'development',
                     url: 'https://github.com/stuti-tomar/myuplink-selenium.git',
                     credentialsId: 'GitHub_Token'
             }
         }
-        stage('Build') {
-            steps {
-                sh 'mvn clean install'
-            }
-        }
+        
+        // Step 2: Run Automated Tests
         stage('Run Tests') {
             steps {
+				echo "Running automated tests..."
                 sh 'mvn test'
             }
         }
-        stage('Archive Results') {
+        
+    // Step 3: Generate and Archive Test Reports
+        stage('Generate and Archive Reports') {
             steps {
+                echo "Archiving test reports..."
                 archiveArtifacts artifacts: '**/target/*.jar', allowEmptyArchive: true
-                junit '**/target/surefire-reports/*.xml'
+                junit '**/target/surefire-reports/*.xml' // Ensure test reports are placed in this path
             }
+        }
+    }
+    
+    post {
+        always {
+			// Notify on Build Completion (Always)
+            mail to: 'stuti.tomar2011@gmail.com, stuti.tomar2015@gmail.com',
+                subject: "Build #${BUILD_NUMBER}: Test Execution Completed",
+                body: "The test execution for build #${BUILD_NUMBER} has completed. Please check Jenkins for details: ${BUILD_URL}"
+        }
+         success {
+            // Notify on Success
+            mail to: 'stuti.tomar2011@gmail.com',
+                subject: "Build #${BUILD_NUMBER}: SUCCESS",
+                body: "All tests passed successfully for build #${BUILD_NUMBER}. Details: ${BUILD_URL}"
+        }
+        failure {
+            // Notify on Failure
+            mail to: 'stuti.tomar2015@gmail.com',
+                subject: "Build #${BUILD_NUMBER}: FAILURE",
+                body: "Some tests failed in build #${BUILD_NUMBER}. Please investigate the issues. Logs: ${BUILD_URL}"
         }
     }
 }

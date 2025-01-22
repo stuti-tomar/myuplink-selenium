@@ -1,5 +1,12 @@
 pipeline {
     agent any
+     parameters {
+        booleanParam(name: 'FORCE_RUN', defaultValue: false, description: 'Force pipeline to run even without changes')
+    }
+    triggers {
+        pollSCM('H/5 * * * *')  // Check for changes every 5 minutes
+        cron('H 12 * * *')      // Run the job every day at 12 PM (noon)
+    }
     stages {
 		 // Step 1: Checkout Code from Repository
         stage('Checkout Code') {

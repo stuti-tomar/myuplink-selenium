@@ -14,7 +14,7 @@ pipeline {
 				echo "Fetching the latest code from the repository..."
                 git branch: 'development',
                     url: 'https://github.com/stuti-tomar/myuplink-selenium.git',
-                    credentialsId: 'GitHub_Token'
+                    credentialsId: 'GitHub_PAT'
             }
         }
         

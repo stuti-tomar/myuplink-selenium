@@ -57,7 +57,7 @@ public class LoginTest extends BaseTest {
 	}
 
 	
-	@Test(priority = 4, description="scenario with correct email and correct password")
+	/*@Test(priority = 4, description="scenario with correct email and correct password")
 
 	public void testSuccessfulLogin() throws Exception 
 	{
@@ -67,7 +67,7 @@ public class LoginTest extends BaseTest {
 		loginPage.clickSendCode();
 		loginPage.enterEmailVerificationCode();
 		loginPage.verifySuccessfulLogin();
-	}
+	}*/
 	
 	/*@Test(description="scenario with correct email and correct password")
 

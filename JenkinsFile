@@ -25,6 +25,7 @@ pipeline {
                 bat 'mvn test'
             }
         }
+        }
         
         // Step 3: Generate and Archive Test Reports
         

@@ -34,7 +34,7 @@ pipeline {
                 archiveArtifacts artifacts: 'test-output/testng-results.xml', allowEmptyArchive: true
                 
                 // Publish the TestNG results in Jenkins UI
-                publishTestNGResults testResults: 'test-output/testng-results.xml'
+               junit '**/test-output/testng-results.xml'
             }
         }
     }

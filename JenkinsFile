@@ -26,18 +26,20 @@ pipeline {
             }
         }
         
-    // Step 3: Generate and Archive Test Reports
-        stage('Generate and Archive Reports') {
-            steps {
-               echo "Archiving TestNG reports..."
+        // Step 3: Generate and Archive Test Reports
+        
+    
+       // stage('Generate and Archive Reports') {
+         //   steps {
+          //     echo "Archiving TestNG reports..."
                 // Archive/Store the TestNG XML report
-                archiveArtifacts artifacts: 'test-output/testng-results.xml', allowEmptyArchive: true
+            //    archiveArtifacts artifacts: 'test-output/testng-results.xml', allowEmptyArchive: true
                 
                 // Publish the TestNG results in Jenkins UI
-               junit '**/test-output/testng-results.xml'
-            }
+              // junit '**/test-output/testng-results.xml'
+            /*}
         }
-    }
+    }*/
     
     post {
         always {

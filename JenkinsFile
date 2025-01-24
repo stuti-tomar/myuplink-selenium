@@ -8,7 +8,8 @@ pipeline {
         cron('H 12 * * *')      // Run the job every day at 12 PM (noon)
     }
     stages {
-		 // Step 1: Checkout Code from Repository
+
+		 // Stage 1: Checkout Code from Repository
         stage('Checkout Code') {
             steps {
 				echo "Fetching the latest code from the repository..."
@@ -18,7 +19,20 @@ pipeline {
             }
         }
         
-        // Step 2: Run Automated Tests
+         // Stage 2: Build the Project
+        stage('Build') {
+            steps {
+                // Clean the environment by removing old files
+                echo "Cleaning the environment..."
+                sh 'mvn clean'
+
+                // The install phase resolves and downloads the dependencies required for tests (e.g., JUnit, TestNG, etc.).
+                echo "Running Maven build..."
+                sh 'mvn clean install'
+            }
+        }
+        
+        // Stage 3: Run Automated Tests
         stage('Run Tests') {
             steps {
 				echo "Running automated tests..."
@@ -27,20 +41,22 @@ pipeline {
         }
         }
         
-        // Step 3: Generate and Archive Test Reports
+        // Step 4: Generate and Archive Test Reports
         
     
-       // stage('Generate and Archive Reports') {
-         //   steps {
-          //     echo "Archiving TestNG reports..."
-                // Archive/Store the TestNG XML report
-            //    archiveArtifacts artifacts: 'test-output/testng-results.xml', allowEmptyArchive: true
-                
-                // Publish the TestNG results in Jenkins UI
-              // junit '**/test-output/testng-results.xml'
-            /*}
+        stage('Generate and Archive Reports') {
+        steps {
+                // Archiving TestNG or JUnit reports for later analysis or viewing in Jenkins UI
+                echo "Archiving TestNG results and publishing test reports..."
+        
+        // Ensure the path matches where your reports are generated
+        archiveArtifacts artifacts: 'target/surefire-reports/**/*', allowEmptyArchive: true
+        
+        // Publish JUnit or TestNG test results to Jenkins UI
+        junit 'target/surefire-reports/*.xml'
+            }
         }
-    }*/
+    }
     
     post {
         always {

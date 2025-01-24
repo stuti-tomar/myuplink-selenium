@@ -44,19 +44,19 @@ pipeline {
         // Step 4: Generate and Archive Test Reports
         
     
-        stage('Generate and Archive Reports') {
-        steps {
+      //  stage('Generate and Archive Reports') {
+        //steps {
                 // Archiving TestNG or JUnit reports for later analysis or viewing in Jenkins UI
-                echo "Archiving TestNG results and publishing test reports..."
+          //      echo "Archiving TestNG results and publishing test reports..."
         
         // Ensure the path matches where your reports are generated
-        archiveArtifacts artifacts: 'target/surefire-reports/**/*', allowEmptyArchive: true
+        //archiveArtifacts artifacts: 'target/surefire-reports/**/*', allowEmptyArchive: true
         
         // Publish JUnit or TestNG test results to Jenkins UI
-        junit 'target/surefire-reports/*.xml'
-            }
-        }
-    }
+       // junit 'target/surefire-reports/*.xml'
+            //}
+        //}
+   // }
     
     post {
         always {

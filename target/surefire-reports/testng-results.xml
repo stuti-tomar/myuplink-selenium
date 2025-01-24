@@ -1,73 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-16T21:34:40 IST" name="Suite" finished-at="2025-01-16T21:36:33 IST" duration-ms="112971">
+  <suite started-at="2025-01-24T12:57:50 IST" name="Suite" finished-at="2025-01-24T12:58:26 IST" duration-ms="36519">
     <groups>
     </groups>
-    <test started-at="2025-01-16T21:34:40 IST" name="Test" finished-at="2025-01-16T21:36:33 IST" duration-ms="112971">
+    <test started-at="2025-01-24T12:57:50 IST" name="Test" finished-at="2025-01-24T12:58:26 IST" duration-ms="36519">
       <class name="org.myuplink.testcase.LoginTest">
-        <test-method is-config="true" signature="browserSetup()[pri:0, instance:org.myuplink.testcase.LoginTest@1ab3a8c8]" started-at="2025-01-16T21:34:41 IST" name="browserSetup" finished-at="2025-01-16T21:34:54 IST" duration-ms="13325" status="PASS">
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:org.myuplink.testcase.LoginTest@402bba4f]" started-at="2025-01-24T12:57:50 IST" name="browserSetup" finished-at="2025-01-24T12:57:59 IST" duration-ms="8808" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.myuplink.testcase.LoginTest@1ab3a8c8]" started-at="2025-01-16T21:34:54 IST" name="setUp" finished-at="2025-01-16T21:34:58 IST" duration-ms="3756" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.myuplink.testcase.LoginTest@402bba4f]" started-at="2025-01-24T12:57:59 IST" name="setUp" finished-at="2025-01-24T12:58:01 IST" duration-ms="2838" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testInvalidFormatEmailAndCorrectPwd()[pri:1, instance:org.myuplink.testcase.LoginTest@1ab3a8c8]" started-at="2025-01-16T21:34:58 IST" name="testInvalidFormatEmailAndCorrectPwd" description="scenario with invalid format of email and correct password" finished-at="2025-01-16T21:34:59 IST" duration-ms="1844" status="PASS">
+        <test-method signature="testInvalidFormatEmailAndCorrectPwd()[pri:1, instance:org.myuplink.testcase.LoginTest@402bba4f]" started-at="2025-01-24T12:58:01 IST" name="testInvalidFormatEmailAndCorrectPwd" description="scenario with invalid format of email and correct password" finished-at="2025-01-24T12:58:03 IST" duration-ms="1940" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidFormatEmailAndCorrectPwd -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.myuplink.testcase.LoginTest@1ab3a8c8]" started-at="2025-01-16T21:34:59 IST" name="tearDown" finished-at="2025-01-16T21:34:59 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.myuplink.testcase.LoginTest@402bba4f]" started-at="2025-01-24T12:58:03 IST" name="tearDown" finished-at="2025-01-24T12:58:03 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="browserSetup()[pri:0, instance:org.myuplink.testcase.LoginTest@1ab3a8c8]" started-at="2025-01-16T21:34:59 IST" name="browserSetup" finished-at="2025-01-16T21:35:14 IST" duration-ms="14412" status="PASS">
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:org.myuplink.testcase.LoginTest@402bba4f]" started-at="2025-01-24T12:58:03 IST" name="browserSetup" finished-at="2025-01-24T12:58:10 IST" duration-ms="6222" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.myuplink.testcase.LoginTest@1ab3a8c8]" started-at="2025-01-16T21:35:14 IST" name="setUp" finished-at="2025-01-16T21:35:18 IST" duration-ms="3722" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.myuplink.testcase.LoginTest@402bba4f]" started-at="2025-01-24T12:58:10 IST" name="setUp" finished-at="2025-01-24T12:58:12 IST" duration-ms="1985" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testBlankUserNameAndBlankPassword()[pri:2, instance:org.myuplink.testcase.LoginTest@1ab3a8c8]" started-at="2025-01-16T21:35:18 IST" name="testBlankUserNameAndBlankPassword" description="scenario with blank email and blank password" finished-at="2025-01-16T21:35:19 IST" duration-ms="1484" status="PASS">
+        <test-method signature="testBlankUserNameAndBlankPassword()[pri:2, instance:org.myuplink.testcase.LoginTest@402bba4f]" started-at="2025-01-24T12:58:12 IST" name="testBlankUserNameAndBlankPassword" description="scenario with blank email and blank password" finished-at="2025-01-24T12:58:15 IST" duration-ms="2982" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBlankUserNameAndBlankPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.myuplink.testcase.LoginTest@1ab3a8c8]" started-at="2025-01-16T21:35:19 IST" name="tearDown" finished-at="2025-01-16T21:35:19 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.myuplink.testcase.LoginTest@402bba4f]" started-at="2025-01-24T12:58:15 IST" name="tearDown" finished-at="2025-01-24T12:58:15 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="browserSetup()[pri:0, instance:org.myuplink.testcase.LoginTest@1ab3a8c8]" started-at="2025-01-16T21:35:19 IST" name="browserSetup" finished-at="2025-01-16T21:35:35 IST" duration-ms="16391" status="PASS">
+        <test-method is-config="true" signature="browserSetup()[pri:0, instance:org.myuplink.testcase.LoginTest@402bba4f]" started-at="2025-01-24T12:58:15 IST" name="browserSetup" finished-at="2025-01-24T12:58:20 IST" duration-ms="5330" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserSetup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.myuplink.testcase.LoginTest@1ab3a8c8]" started-at="2025-01-16T21:35:35 IST" name="setUp" finished-at="2025-01-16T21:35:40 IST" duration-ms="4660" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.myuplink.testcase.LoginTest@402bba4f]" started-at="2025-01-24T12:58:20 IST" name="setUp" finished-at="2025-01-24T12:58:24 IST" duration-ms="3652" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testWrongCredentials()[pri:3, instance:org.myuplink.testcase.LoginTest@1ab3a8c8]" started-at="2025-01-16T21:35:40 IST" name="testWrongCredentials" description="scenario with wrong email or password" finished-at="2025-01-16T21:35:43 IST" duration-ms="2584" status="PASS">
+        <test-method signature="testWrongCredentials()[pri:3, instance:org.myuplink.testcase.LoginTest@402bba4f]" started-at="2025-01-24T12:58:24 IST" name="testWrongCredentials" description="scenario with wrong email or password" finished-at="2025-01-24T12:58:26 IST" duration-ms="2715" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testWrongCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.myuplink.testcase.LoginTest@1ab3a8c8]" started-at="2025-01-16T21:35:43 IST" name="tearDown" finished-at="2025-01-16T21:35:43 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="browserSetup()[pri:0, instance:org.myuplink.testcase.LoginTest@1ab3a8c8]" started-at="2025-01-16T21:35:43 IST" name="browserSetup" finished-at="2025-01-16T21:36:04 IST" duration-ms="20932" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserSetup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:org.myuplink.testcase.LoginTest@1ab3a8c8]" started-at="2025-01-16T21:36:04 IST" name="setUp" finished-at="2025-01-16T21:36:06 IST" duration-ms="2422" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testSuccessfulLogin()[pri:4, instance:org.myuplink.testcase.LoginTest@1ab3a8c8]" started-at="2025-01-16T21:36:06 IST" name="testSuccessfulLogin" description="scenario with correct email and correct password" finished-at="2025-01-16T21:36:33 IST" duration-ms="27367" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testSuccessfulLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.myuplink.testcase.LoginTest@1ab3a8c8]" started-at="2025-01-16T21:36:33 IST" name="tearDown" finished-at="2025-01-16T21:36:33 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.myuplink.testcase.LoginTest@402bba4f]" started-at="2025-01-24T12:58:26 IST" name="tearDown" finished-at="2025-01-24T12:58:26 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -26,9 +26,9 @@ pipeline {
                 echo "Cleaning the environment..."
                 bat 'mvn clean'
 
-                // The install phase resolves and downloads the dependencies required for tests (e.g., JUnit, TestNG, etc.).
-                echo "Running Maven build..."
-                bat 'mvn clean install'
+                 // The install phase resolves and downloads the dependencies, without running tests.
+                echo "Running Maven build (without tests)..."
+                bat 'mvn clean install -DskipTests'
             }
         }
         

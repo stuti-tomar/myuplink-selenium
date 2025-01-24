@@ -24,11 +24,11 @@ pipeline {
             steps {
                 // Clean the environment by removing old files
                 echo "Cleaning the environment..."
-                sh 'mvn clean'
+                bat 'mvn clean'
 
                 // The install phase resolves and downloads the dependencies required for tests (e.g., JUnit, TestNG, etc.).
                 echo "Running Maven build..."
-                sh 'mvn clean install'
+                bat 'mvn clean install'
             }
         }
         
